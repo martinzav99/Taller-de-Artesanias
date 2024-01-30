@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Feria de artesanos</title>
+	<script src="jquery-3.5.1.min.js"></script>
+	<script src="consultaPrecios.js"></script>
+	<script src="config.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="creacionPublicacion.css">
+</head>
+
+<body>
+	<a href="./inicio.html" class="home">Home</a>
+	<div class="contenedor-general">
+		<div class="card">
+			<h1>Creacion de Publicacion</h1>
+			<div class="contenedor-formulario">
+				<h2>Datos de Publicacion</h2>
+
+				<label>Nombre de publicacion:</label>
+				<input id="producto" type="text">
+				<br>
+				<label> Descripcion de publicacion:</label>
+				<textarea id="descripcion"></textarea>
+				<br>
+				<label> Seleccionar una foto:</label>
+				<input type="file" accept="image/png, image/jpeg">
+				<br>
+				<label>Categoria de publicacion:</label>
+				<select name="Categoria">
+					<option value="c0"></option>
+					<option value="c1">Alimentos y bebidas</option>
+					<option value="c2">Animales y mascotas</option>
+					<option value="c3">Antiguedades y colecciones</option>
+					<option value="c4">Herramientas</option>
+					<option value="c5">Joyas y relojes</option>
+					<option value="c6">Juegos y juguetes</option>
+				</select>
+				<br>
+				<label>Tipo de publicacion:</label>
+				<select name="Tipo">
+					<option value="Venta Directa">Venta Directa</option>
+					<option value="Muestra">Muestra</option>
+				</select>
+				<br>
+				<h2>Datos de Contacto</h2>
+
+				<label>Nombre:</label>
+				<input type="text" id="nombreContacto">
+				<br>
+				<label>Email:</label>
+				<input type="email" id="email">
+				<br>
+				<label>Nro de Telefono:</label>
+				<input type="number" id="nroTelefono">
+				<br>
+				<input type="submit" onclick="validar()"> 
+			</div>
+
+			<br>
+			<div class="opcionales-contenedor">
+				<label> Forma de comercializar:</label>
+				<textarea></textarea>
+				<br>
+				<label>Precio:</label>
+				<input type="number" id="precio">
+				<br>
+				<button id=SDP>Sugerencia de Precio</button>
+			</div>
+			<div class="recomendacion" id="recomendacion"></div>
+		</div>
+	</div>
+	<script src="creacionPublicacion.js"></script>
+</body>
+
+</html>

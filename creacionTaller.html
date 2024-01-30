@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="creacionTaller.css">
+	<meta charset="utf-8">
+	<script src="jquery-3.5.1.min.js"></script>
+	<script src="config.js"></script>
+	<script src="normalizar.js"></script>
+	
+	
+    
+    <script src="mapCreation.js"></script> 
+    <script src="./leaflet/leaflet.js"></script>
+    <link rel="stylesheet" href="./leaflet/leaflet.css" />
+
+	<title>Feria de Artesanos</title>
+</head>
+
+<body>
+	<a href="./inicio.html" class="home">Home</a>
+	<div class="contenedor-general">
+		<div class="card">
+			<h1>Creacion de Taller</h1>
+
+			<div class="contenedor-formulario2">
+				<h2>Datos de Taller</h2>
+
+				<label>Nombre:</label>
+				<input type="text" id="nombre">
+				<br>
+				<label> Descripcion general del lugar:</label>
+				<textarea id="descripcion"></textarea>
+				<br>
+				<label>Categoria de Taller:</label>
+				<select name="Categoria">
+					<option value="c1">Categoria</option>
+					<option value="c2">Baile</option>
+					<option value="c3">Pintura y Dibujo</option>
+					<option value="c4">Turismo</option>
+					<option value="c5">Juguetes</option>
+					<option value="c6">Antiguedades</option>
+				</select>
+				<br>
+				<label> Actividades:</label>
+				<textarea id="actividades"></textarea>
+				<br>
+				<label>Direccion:</label>
+				<input id="dir" type="text">
+				<div id="validarDireccion"></div>
+				<button id=NDD>Localizar</button>
+				<br>				
+				<label> Horarios:</label>
+				<textarea id="horarios"></textarea>
+				<br>
+				<label>Nro de Telefono:</label>
+				<input type="number" id="nroTelefono">
+				<br>
+				<label> Seleccionar una foto:</label>
+				<input type="file" accept="image/png, image/jpeg">
+				<button id=registrar onclick="validar()">Registrar</button>
+			</div>
+		</div>
+	</div>
+	<div id="mapid"></div>
+	<script src="creacionTaller.js"></script>
+</body>
+
+</html>
